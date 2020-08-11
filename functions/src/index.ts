@@ -1,8 +1,14 @@
 import * as functions from 'firebase-functions';
+import { Storage } from '@google-cloud/storage';
+import * as fs from 'fs-extra';
+import { object } from 'firebase-functions/lib/providers/storage';
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+const storage = new Storage();
+
+export const  optimizeImages = functions.storage
+.object()
+.onFinalize(async object=>{
+    console.log('upload file man');
+    
+})
+
