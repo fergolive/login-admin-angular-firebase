@@ -48,14 +48,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 
+import { DocumentComponent } from './components/document/document.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 const d={
-  apiKey: "AIzaSyAIoICEHE8-ZrjOgPyi6x5cwPrS1rhvECA",
-    authDomain: "login-182.firebaseapp.com",
-    databaseURL: "https://login-182.firebaseio.com",
-    projectId: "login-182",
-    storageBucket: "login-182.appspot.com",
-    messagingSenderId: "766116896984",
-    appId: "1:766116896984:web:2aab10fb42cbf14f13b7ad"
+ 
 }
 
 export const config=d;
@@ -64,7 +61,8 @@ export const config=d;
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DocumentComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +73,7 @@ export const config=d;
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
     AngularFireFunctionsModule, 
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatCheckboxModule,

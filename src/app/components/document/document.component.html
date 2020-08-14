@@ -1,0 +1,41 @@
+<div style="display: flex;width: 100%;justify-content: center;background-color: darkslategrey;align-items: center;height: 100%;padding: 20px;">
+  
+    <mat-card style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+
+<div class="new-post-container">
+    <form [formGroup]="newDocForm" (ngSubmit)="addDoc(newDocForm.value)">
+        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title post" formControlName="titlePost">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Content</mat-label>
+        <input matInput placeholder="Content post" formControlName="contentPost">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Tags" multiple formControlName="tagsPost">
+          <mat-option value="life">Life</mat-option>
+          <mat-option value="sport">Sport</mat-option>
+          <mat-option value="beauty">Beauty</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="container-input-file">
+        <label class="custom-file">
+          <input type="file" formControlName="imagePost" (change)="handleImage($event)" />
+        <div style="display: flex;width: 100%;justify-content: center;align-items: center;">
+
+          <div><mat-icon>add_photo_alternate</mat-icon></div>
+        </div>
+        </label>
+      </div>
+      <div class="container-button">
+        <input type="submit" class="mat-flat-button" value="Save" >
+      </div>
+    </div>
+    </form>
+  </div>
+
+    </mat-card>
+</div>
+  
